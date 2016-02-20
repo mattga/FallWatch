@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	
+	// Initialize watch connectivity
+	_session = [WCSession defaultSession];
+	_session.delegate = self;
+	
+	if ([WCSession isSupported]) {
+		[_session activateSession];
+	}
+	
 	return YES;
 }
 
@@ -41,5 +50,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark -
+#pragma mark Session Delegate
+
+- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[NSUserDefaults standardUserDefaults] setObject:message forKey:@"wcMessage"];
+	});
+}
+
 
 @end

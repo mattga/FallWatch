@@ -1,3 +1,27 @@
 dependencies: \
   /Users/mattga/Documents/iOS/FallWatch/FallWatch/ViewController.m \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/NSDictionary+Pebble.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/NSNumber+stdint.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBErrors.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBDataLoggingService.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/gtypes.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBBitmap.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBPebbleCentral+Legacy.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBPebbleCentral+DefaultCentral.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBPebbleCentral.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBResourceMetadata.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBFirmwareMetadata.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBFirmwareVersion.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBVersionInfo.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch+Version.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch+Sports.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch+Ping.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch+Legacy.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch+Golf.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch+AppMessages.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBWatch.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBDefines.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PBLogConfig.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Headers/PebbleKit.h \
+  /Users/mattga/Documents/iOS/FallWatch/Pods/PebbleKit/PebbleKit.framework/Modules/module.modulemap \
   /Users/mattga/Documents/iOS/FallWatch/FallWatch/ViewController.h

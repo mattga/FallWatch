@@ -58,6 +58,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/PebbleKit.framework/Info.plist</key>
+		<data>
+		Q2y+wfIITK/yh4fmUw5VHV2P+WY=
+		</data>
+		<key>Frameworks/PebbleKit.framework/PebbleKit</key>
+		<data>
+		LsJTaph2tJCXHwRc9nK/NIfWkNU=
+		</data>
+		<key>Frameworks/PebbleKit.framework/_CodeSignature/CodeResources</key>
+		<data>
+		ydvuLemB7ooxw2OOh5RP2kZ0RgU=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		9IjEbKR9tWZRsZEPPOtP+jYevTk=
@@ -66,11 +78,39 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon24x24@2x.png</key>
+		<data>
+		MGQS+ftV2vijhHM+ATEK4pihFx0=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon27.5x27.5@2x.png</key>
+		<data>
+		y1vMF7xqNGlPsdheDf7QZaps2sk=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon29x29@2x.png</key>
+		<data>
+		iERQUhhqkbQV59oQyHu7uZpr190=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon29x29@3x.png</key>
+		<data>
+		XLAgPitBGxi7Mno46NNEB2FoQZo=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon40x40@2x.png</key>
+		<data>
+		B4EDVTojDyBVGbYo1jsx+84cRtU=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon86x86@2x.png</key>
+		<data>
+		79wi6KsZX9IId6jd7/tIuFlTjUk=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon98x98@2x.png</key>
+		<data>
+		E/9NlgQ9LPXxgZGD6Zg1f3tp9CI=
+		</data>
 		<key>Watch/FallWatch WatchKit App.app/Base.lproj/Interface-notification.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PdRtfU3s/nfOsJxCptfD34vXuY4=
+			WYXqmXhe066sD6zT5f0EX5xwiis=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -79,18 +119,18 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HxoGwbLe3Z8Pga/My0YrF9uKTVE=
+			R4KGVbHKQUWvqtFHYvvV0SHiwSs=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Watch/FallWatch WatchKit App.app/FallWatch WatchKit App</key>
 		<data>
-		3xBuCxMzGWH8AYU7FQf5j6Bd4lE=
+		VjzjQ+HG8RJYin7bUcm7TiZ/NcA=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/Info.plist</key>
 		<data>
-		uy8CGZxZgPtYGprCXoTtaj6NFVY=
+		U7czZiEShZcPoCfGdZERkN0XQNc=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/PkgInfo</key>
 		<data>
@@ -98,7 +138,7 @@
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/PlugIns/FallWatch WatchKit Extension.appex/FallWatch WatchKit Extension</key>
 		<data>
-		2XsATpgh7yLx8o5vAPlI4ccLoRc=
+		lkC0qX1ptMyyV688SMKIQR3FAzQ=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/PlugIns/FallWatch WatchKit Extension.appex/Info.plist</key>
 		<data>
@@ -114,7 +154,7 @@
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/_CodeSignature/CodeResources</key>
 		<data>
-		cw1jxwNerpEqAwYZ9P0j/OaQyV4=
+		mLxPFcoiSxJDcT2dgIYhpIUqYTQ=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/_WatchKitStub/WK</key>
 		<data>
@@ -185,11 +225,51 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/PebbleKit.framework/Info.plist</key>
+		<data>
+		Q2y+wfIITK/yh4fmUw5VHV2P+WY=
+		</data>
+		<key>Frameworks/PebbleKit.framework/PebbleKit</key>
+		<data>
+		LsJTaph2tJCXHwRc9nK/NIfWkNU=
+		</data>
+		<key>Frameworks/PebbleKit.framework/_CodeSignature/CodeResources</key>
+		<data>
+		ydvuLemB7ooxw2OOh5RP2kZ0RgU=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon24x24@2x.png</key>
+		<data>
+		MGQS+ftV2vijhHM+ATEK4pihFx0=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon27.5x27.5@2x.png</key>
+		<data>
+		y1vMF7xqNGlPsdheDf7QZaps2sk=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon29x29@2x.png</key>
+		<data>
+		iERQUhhqkbQV59oQyHu7uZpr190=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon29x29@3x.png</key>
+		<data>
+		XLAgPitBGxi7Mno46NNEB2FoQZo=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon40x40@2x.png</key>
+		<data>
+		B4EDVTojDyBVGbYo1jsx+84cRtU=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon86x86@2x.png</key>
+		<data>
+		79wi6KsZX9IId6jd7/tIuFlTjUk=
+		</data>
+		<key>Watch/FallWatch WatchKit App.app/AppIcon98x98@2x.png</key>
+		<data>
+		E/9NlgQ9LPXxgZGD6Zg1f3tp9CI=
+		</data>
 		<key>Watch/FallWatch WatchKit App.app/Base.lproj/Interface-notification.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PdRtfU3s/nfOsJxCptfD34vXuY4=
+			WYXqmXhe066sD6zT5f0EX5xwiis=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -198,18 +278,18 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HxoGwbLe3Z8Pga/My0YrF9uKTVE=
+			R4KGVbHKQUWvqtFHYvvV0SHiwSs=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Watch/FallWatch WatchKit App.app/FallWatch WatchKit App</key>
 		<data>
-		3xBuCxMzGWH8AYU7FQf5j6Bd4lE=
+		VjzjQ+HG8RJYin7bUcm7TiZ/NcA=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/Info.plist</key>
 		<data>
-		uy8CGZxZgPtYGprCXoTtaj6NFVY=
+		U7czZiEShZcPoCfGdZERkN0XQNc=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/PkgInfo</key>
 		<data>
@@ -217,7 +297,7 @@
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/PlugIns/FallWatch WatchKit Extension.appex/FallWatch WatchKit Extension</key>
 		<data>
-		2XsATpgh7yLx8o5vAPlI4ccLoRc=
+		lkC0qX1ptMyyV688SMKIQR3FAzQ=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/PlugIns/FallWatch WatchKit Extension.appex/Info.plist</key>
 		<data>
@@ -233,7 +313,7 @@
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/_CodeSignature/CodeResources</key>
 		<data>
-		cw1jxwNerpEqAwYZ9P0j/OaQyV4=
+		mLxPFcoiSxJDcT2dgIYhpIUqYTQ=
 		</data>
 		<key>Watch/FallWatch WatchKit App.app/_WatchKitStub/WK</key>
 		<data>

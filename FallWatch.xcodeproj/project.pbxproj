@@ -110,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		376593181FA1893D83830A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A93111DD1C781191006B33F5 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +124,7 @@
 				A93112011C781191006B33F5 /* FallWatch WatchKit App */,
 				A93112101C781191006B33F5 /* FallWatch WatchKit Extension */,
 				A93111E71C781191006B33F5 /* Products */,
+				376593181FA1893D83830A69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +264,11 @@
 					A93111E51C781191006B33F5 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = B4M63GYCM3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A93111FC1C781191006B33F5 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -379,50 +392,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A931121F1C781191006B33F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		A93112201C781191006B33F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,20 +430,6 @@
 			};
 			name = Release;
 		};
-		A93112221C781191006B33F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "FallWatch WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mg.apps.FallWatch.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Debug;
-		};
 		A93112231C781191006B33F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -488,21 +443,6 @@
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
-		};
-		A93112261C781191006B33F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				IBSC_MODULE = FallWatch_WatchKit_Extension;
-				INFOPLIST_FILE = "FallWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = mg.apps.FallWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Debug;
 		};
 		A93112271C781191006B33F5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -519,19 +459,6 @@
 			};
 			name = Release;
 		};
-		A931122A1C781191006B33F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = FallWatch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mg.apps.FallWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
 		A931122B1C781191006B33F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,6 +467,10 @@
 				INFOPLIST_FILE = FallWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mg.apps.FallWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -551,7 +482,6 @@
 		A93111E11C781191006B33F5 /* Build configuration list for PBXProject "FallWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A931121F1C781191006B33F5 /* Debug */,
 				A93112201C781191006B33F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -560,26 +490,26 @@
 		A93112211C781191006B33F5 /* Build configuration list for PBXNativeTarget "FallWatch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A93112221C781191006B33F5 /* Debug */,
 				A93112231C781191006B33F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93112251C781191006B33F5 /* Build configuration list for PBXNativeTarget "FallWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A93112261C781191006B33F5 /* Debug */,
 				A93112271C781191006B33F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93112291C781191006B33F5 /* Build configuration list for PBXNativeTarget "FallWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A931122A1C781191006B33F5 /* Debug */,
 				A931122B1C781191006B33F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,18 +10,21 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <table alignment="left" id="Eni-Vq-Cf6"/>
+                        <label width="136" height="118.5" alignment="left" textAlignment="center" numberOfLines="2" id="qEP-25-udn"/>
                     </items>
+                    <connections>
+                        <outlet property="label" destination="qEP-25-udn" id="DAa-W0-9mk"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="261"/>
+            <point key="canvasLocation" x="220" y="249"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="I will detect whether you fall!" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Hello" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
