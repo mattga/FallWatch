@@ -1,0 +1,132 @@
+BCSymbolMap Version: 1.0
+-[ExtensionDelegate applicationDidFinishLaunching]
+-[ExtensionDelegate applicationDidBecomeActive]
+-[ExtensionDelegate applicationWillResignActive]
+OBJC_CLASS_NAME_
+OBJC_METH_VAR_NAME_
+OBJC_METH_VAR_TYPE_
+OBJC_METH_VAR_NAME_1
+OBJC_METH_VAR_NAME_2
+OBJC_METH_VAR_NAME_3
+OBJC_METH_VAR_TYPE_4
+OBJC_METH_VAR_TYPE_5
+OBJC_METH_VAR_NAME_6
+OBJC_METH_VAR_TYPE_7
+OBJC_METH_VAR_NAME_8
+OBJC_METH_VAR_TYPE_9
+OBJC_METH_VAR_TYPE_10
+OBJC_METH_VAR_NAME_11
+OBJC_METH_VAR_TYPE_12
+OBJC_METH_VAR_NAME_13
+OBJC_METH_VAR_TYPE_14
+OBJC_METH_VAR_TYPE_15
+OBJC_METH_VAR_NAME_16
+OBJC_METH_VAR_NAME_17
+OBJC_METH_VAR_TYPE_18
+OBJC_CLASS_NAME_19
+OBJC_METH_VAR_NAME_20
+OBJC_METH_VAR_TYPE_21
+OBJC_METH_VAR_NAME_22
+OBJC_METH_VAR_TYPE_23
+OBJC_METH_VAR_NAME_24
+OBJC_METH_VAR_TYPE_25
+OBJC_METH_VAR_NAME_26
+OBJC_METH_VAR_TYPE_27
+OBJC_METH_VAR_NAME_28
+OBJC_METH_VAR_TYPE_29
+OBJC_METH_VAR_NAME_30
+OBJC_METH_VAR_TYPE_31
+OBJC_METH_VAR_NAME_32
+OBJC_METH_VAR_TYPE_33
+OBJC_METH_VAR_NAME_34
+OBJC_METH_VAR_TYPE_35
+OBJC_METH_VAR_NAME_36
+OBJC_METH_VAR_NAME_37
+OBJC_METH_VAR_TYPE_38
+OBJC_METH_VAR_NAME_39
+OBJC_METH_VAR_TYPE_40
+OBJC_METH_VAR_NAME_41
+OBJC_METH_VAR_NAME_42
+OBJC_METH_VAR_TYPE_43
+OBJC_METH_VAR_NAME_44
+OBJC_METH_VAR_NAME_45
+OBJC_METH_VAR_TYPE_46
+OBJC_METH_VAR_NAME_47
+OBJC_METH_VAR_TYPE_48
+OBJC_METH_VAR_NAME_49
+OBJC_METH_VAR_NAME_50
+OBJC_METH_VAR_NAME_51
+OBJC_METH_VAR_TYPE_52
+OBJC_METH_VAR_NAME_53
+OBJC_CLASS_NAME_54
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+OBJC_PROP_NAME_ATTR_
+OBJC_PROP_NAME_ATTR_55
+OBJC_PROP_NAME_ATTR_56
+OBJC_PROP_NAME_ATTR_57
+OBJC_PROP_NAME_ATTR_58
+OBJC_PROP_NAME_ATTR_59
+OBJC_PROP_NAME_ATTR_60
+l_OBJC_$_PROP_LIST_NSObject
+l_OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_$_PROTOCOL_REFS_WKExtensionDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_WKExtensionDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_WKExtensionDelegate
+l_OBJC_PROTOCOL_$_WKExtensionDelegate
+l_OBJC_LABEL_PROTOCOL_$_WKExtensionDelegate
+l_OBJC_CLASS_PROTOCOLS_$_ExtensionDelegate
+l_OBJC_METACLASS_RO_$_ExtensionDelegate
+OBJC_METACLASS_$_ExtensionDelegate
+l_OBJC_$_INSTANCE_METHODS_ExtensionDelegate
+l_OBJC_$_PROP_LIST_ExtensionDelegate
+l_OBJC_CLASS_RO_$_ExtensionDelegate
+OBJC_CLASS_$_ExtensionDelegate
+OBJC_LABEL_CLASS_$
+Apple LLVM version 7.0.2 (clang-700.1.81)
+/Users/mattga/Library/Developer/Xcode/DerivedData/ModuleCache/2UO6IAXP6ZNG8/ObjectiveC-B8AF5LV60QGH.pcm
+ObjectiveC
+/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/usr/include/objc
+/Users/mattga/Library/Developer/Xcode/DerivedData/ModuleCache/2UO6IAXP6ZNG8/WatchKit-1ZKYP2CV0ZLND.pcm
+WatchKit
+/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/WatchKit.framework
+-[ExtensionDelegate applicationWillResignActive]
+/Users/mattga/Documents/iOS/FallWatch/FallWatch WatchKit Extension/ExtensionDelegate.m
+/Users/mattga/Documents/iOS/FallWatch
+-[ExtensionDelegate applicationDidBecomeActive]
+-[ExtensionDelegate applicationDidFinishLaunching]
+-[InterfaceController awakeWithContext:]
+-[InterfaceController willActivate]
+-[InterfaceController didDeactivate]
+OBJC_CLASS_$_InterfaceController
+OBJC_CLASSLIST_SUP_REFS_$_
+OBJC_SELECTOR_REFERENCES_
+OBJC_SELECTOR_REFERENCES_2
+.str
+_unnamed_cfstring_
+OBJC_SELECTOR_REFERENCES_4
+l_OBJC_METACLASS_RO_$_InterfaceController
+OBJC_METACLASS_$_InterfaceController
+l_OBJC_$_INSTANCE_METHODS_InterfaceController
+l_OBJC_CLASS_RO_$_InterfaceController
+/Users/mattga/Library/Developer/Xcode/DerivedData/ModuleCache/2UO6IAXP6ZNG8/Foundation-1DFKLFBZMJLFC.pcm
+Foundation
+/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/Foundation.framework
+-[InterfaceController didDeactivate]
+/Users/mattga/Documents/iOS/FallWatch/FallWatch WatchKit Extension/InterfaceController.m
+-[InterfaceController willActivate]
+-[InterfaceController awakeWithContext:]
+-[NotificationController init]
+-[NotificationController willActivate]
+-[NotificationController didDeactivate]
+OBJC_CLASS_$_NotificationController
+l_OBJC_METACLASS_RO_$_NotificationController
+OBJC_METACLASS_$_NotificationController
+l_OBJC_$_INSTANCE_METHODS_NotificationController
+l_OBJC_CLASS_RO_$_NotificationController
+-[NotificationController didDeactivate]
+/Users/mattga/Documents/iOS/FallWatch/FallWatch WatchKit Extension/NotificationController.m
+-[NotificationController willActivate]
+-[NotificationController init]
