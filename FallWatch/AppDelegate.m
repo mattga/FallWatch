@@ -23,7 +23,9 @@
 	_session.delegate = self;
 	
 	if ([WCSession isSupported]) {
-		[_session activateSession];
+        NSLog(@"WCSession supported");
+        [_session activateSession];
+        NSLog(@"WCSession activated");
 	}
 	
 	return YES;

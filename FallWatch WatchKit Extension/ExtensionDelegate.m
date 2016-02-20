@@ -16,6 +16,7 @@
     _session          = [WCSession defaultSession];
     _session.delegate = self;
     [_session activateSession];
+    NSLog(@"WCSession activated");
 	
 	[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"wcMessage"];
 }

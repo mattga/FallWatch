@@ -11,6 +11,7 @@
 @interface InterfaceController () {
     NSArray *mockData;
     int k;
+    __block NSDate *lastAcc;
 }
 
 @end
@@ -20,31 +21,38 @@
 - (void)awakeWithContext:(id)context
 {
     [super awakeWithContext:context];
-
+    NSLog(@"Awake");
+    
     _mManager = [[CMMotionManager alloc] init];
-
-    if ([CMSensorRecorder isAccelerometerRecordingAvailable]) {
-        _recorder = [[CMSensorRecorder alloc] init];
-        [_recorder recordAccelerometerForDuration:60 * 60];
+    lastAcc = [NSDate new];
+    
+    if ([_mManager isAccelerometerAvailable]) {
+        NSLog(@"Acelerometer available");
+        
+        [_mManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
+            if (!error && [lastAcc timeIntervalSinceNow] < -.2) {
+                [self sendAccelData:accelerometerData];
+                lastAcc = [NSDate new];
+            } else {
+                NSLog(@"ERROR %@", error);
+            }
+            
+        }];
+    } else {
+        NSLog(@"Acelerometer not a");
     }
-
-    [NSTimer scheduledTimerWithTimeInterval:.5
-                                     target:self
-                                   selector:@selector(fetchAccelData)
-                                   userInfo:nil
-                                    repeats:YES];
-
+    
     k        = 0;
     mockData = @[
-        @[ @1.23, @.036, @.048 ],
-        @[ @1.56, @.027, @.090 ],
-        @[ @1.64, @.024, @.091 ],
-        @[ @1.76, @.028, @.081 ],
-        @[ @1.87, @.025, @.043 ],
-        @[ @1.94, @.026, @.072 ],
-        @[ @2.25, @.025, @.073 ],
-        @[ @2.75, @.025, @.052 ]
-    ];
+                 @[ @1.23, @.036, @.048 ],
+                 @[ @1.56, @.027, @.090 ],
+                 @[ @1.64, @.024, @.091 ],
+                 @[ @1.76, @.028, @.081 ],
+                 @[ @1.87, @.025, @.043 ],
+                 @[ @1.94, @.026, @.072 ],
+                 @[ @2.25, @.025, @.073 ],
+                 @[ @2.75, @.025, @.052 ]
+                 ];
 }
 
 - (void)willActivate
@@ -55,48 +63,36 @@
 - (void)didAppear
 {
     NSDictionary *msg = [[NSUserDefaults standardUserDefaults] objectForKey:@"wcMessage"];
-
+    
     [self.label setText:[NSString stringWithFormat:@"%@", msg]];
 }
 
-- (void)didDeactivate
-{
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
+- (void)willDisappear {
+    [super willDisappear];
+    
+    [_mManager stopAccelerometerUpdates];
 }
 
 #pragma mark -
 #pragma mark Data Acquisition
 
-- (void)fetchAccelData
+- (void)sendAccelData:(CMAccelerometerData*)data
 {
-    //    CMSensorDataList *dataList =
-    //        [_recorder accelerometerDataFromDate:[NSDate dateWithTimeIntervalSinceNow:5] toDate:[NSDate
-    //        new]];
-
-    //    for (CMRecordedAccelerometerData *data in dataList) {
-    //        CMAcceleration accel = data.acceleration;
-    //        NSLog(@"%.4f %.4f %.4f", accel.x, accel.y, accel.z);
-    //    }
-
-    NSArray *data = mockData[k++ % [mockData count]];
-    NSString *str = [NSString stringWithFormat:@"%.4f %.4f %.4f",
-                                               [data[0] doubleValue],
-                                               [data[1] doubleValue],
-                                               [data[2] doubleValue]];
+    CMAcceleration accel = data.acceleration;
+    double anorm = sqrt(pow(accel.x,2) + pow(accel.y,2) + pow(accel.z,2));
+    NSString *str = [NSString stringWithFormat:@"%.4f", anorm];
     NSLog(@"%@", str);
-    [[WCSession defaultSession] sendMessage:@{
-        @"data" : data
-    }
-        replyHandler:^(NSDictionary<NSString *, id> *_Nonnull replyMessage) {
-          NSLog(@"%@", replyMessage);
-        }
-        errorHandler:^(NSError *_Nonnull error) {
-          NSLog(@"ERROR %@", error.localizedDescription);
-        }];
-
+    NSArray *array = @[@(accel.x), @(accel.y), @(accel.z)];
+    [[WCSession defaultSession] sendMessage:@{@"data" : array}
+                               replyHandler:^(NSDictionary<NSString *, id> *_Nonnull replyMessage) {
+                                   NSLog(@"%@", replyMessage);
+                               }
+                               errorHandler:^(NSError *_Nonnull error) {
+                                   NSLog(@"ERROR %@", error.localizedDescription);
+                               }];
+    
     [self.label setText:str];
-    if ([data[0] intValue] > 1.9) {
+    if (accel.x > 1.9) {
         [self.label setTextColor:[UIColor redColor]];
     } else {
         [self.label setTextColor:[UIColor whiteColor]];
