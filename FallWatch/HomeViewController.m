@@ -14,7 +14,7 @@
 #define NUM_RECORDS 10
 
 @interface HomeViewController () {
-    NSTimer *timer;
+    NSTimer *timer, *alertTimer;
     AVAudioPlayer *player;
     HKHealthStore *healthStore;
     HKWorkout *workout;
@@ -24,6 +24,8 @@
     double acc_history[NUM_RECORDS];
     long k;
     long last_processed_seq;
+    
+    BOOL alertTriggered;
 }
 
 @end
@@ -33,7 +35,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    alertTriggered = NO;
+    
     healthStore = [(AppDelegate *)[UIApplication sharedApplication].delegate healthStore];
 
     player = [(AppDelegate *)[UIApplication sharedApplication].delegate player];
@@ -57,7 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
+    
     NSDate *start = [NSDate new];
     NSDate *end   = [NSDate dateWithTimeIntervalSinceNow:60 * 60];
     workout       = [HKWorkout workoutWithActivityType:HKWorkoutActivityTypeWalking startDate:start endDate:end];
@@ -132,11 +136,13 @@
                   //                               NSLog(@"%@", [NSString stringWithFormat:@"Fall: Seq:%d
                   //                               x=%.4f y=%.4f z=%.4f",
                   //                                             seq_idx,x,y,z]);
-                  if ([self didFallHappen:x:y:z]) {
+                  if ([self didFallHappen:x:y:z] && !alertTriggered) {
+                      alertTriggered = YES;
+                      
                       //                                   double curr_avg = [self computeAverageAcc];
                       NSLog(@"%@",
                             [NSString stringWithFormat:@"Fall detected: seq %d, z-acc %.4f", seq_idx, z]);
-                      [self triggerAlerts];
+                      [self showAlert];
                   }
 
                   last_processed_seq = seq_idx;
@@ -158,7 +164,7 @@
 
 - (void)showAlert
 {
-    [NSTimer scheduledTimerWithTimeInterval:10.
+    alertTimer = [NSTimer scheduledTimerWithTimeInterval:10.
                                      target:self
                                    selector:@selector(dismissAndTrigger)
                                    userInfo:nil
@@ -172,12 +178,14 @@
     UIAlertAction *yes = [UIAlertAction actionWithTitle:@"Yes"
                                                   style:UIAlertActionStyleCancel
                                                 handler:^(UIAlertAction *_Nonnull action) {
+                                                    [alertTimer invalidate];
                                                   [self triggerAlerts];
                                                 }];
 
     UIAlertAction *no = [UIAlertAction actionWithTitle:@"No"
                                                  style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction *_Nonnull action) {
+                                                   [alertTimer invalidate];
                                                  [alert dismissViewControllerAnimated:YES completion:nil];
                                                }];
 
@@ -244,7 +252,7 @@
 
 - (IBAction)twilioPressed:(id)sender
 {
-    [self triggerAlerts];
+    [self showAlert];
 }
 
 @end

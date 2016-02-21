@@ -79,11 +79,12 @@
 - (void)sendAccelData:(CMAccelerometerData*)data
 {
     CMAcceleration accel = data.acceleration;
-    double anorm = sqrt(pow(accel.x,2) + pow(accel.y,2) + pow(accel.z,2));
-    NSString *str = [NSString stringWithFormat:@"%.4f", anorm];
+//    double anorm = sqrt(pow(accel.x,2) + pow(accel.y,2) + pow(accel.z,2));
+    NSString *str = [NSString stringWithFormat:@"%d: %.4f", k, accel.z];
     NSLog(@"%@", str);
     NSArray *array = @[@(accel.x), @(accel.y), @(accel.z)];
-    [[WCSession defaultSession] sendMessage:@{@"data" : array}
+    [[WCSession defaultSession] sendMessage:@{@"data" : array,
+                                              @"seq" : @(k++)}
                                replyHandler:^(NSDictionary<NSString *, id> *_Nonnull replyMessage) {
                                    NSLog(@"%@", replyMessage);
                                }
