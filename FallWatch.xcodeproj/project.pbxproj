@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A91090B61C7921170091737B /* MGAlertUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A91090B51C7921170091737B /* MGAlertUtility.m */; };
 		A92690B31C79BE1700CBB33F /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A92690B21C79BE1700CBB33F /* alarm.mp3 */; };
 		A93111EB1C781191006B33F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A93111EA1C781191006B33F5 /* main.m */; };
 		A93111EE1C781191006B33F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A93111ED1C781191006B33F5 /* AppDelegate.m */; };
@@ -74,8 +73,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A91090B41C7921170091737B /* MGAlertUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAlertUtility.h; sourceTree = "<group>"; };
-		A91090B51C7921170091737B /* MGAlertUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAlertUtility.m; sourceTree = "<group>"; };
 		A92690AF1C79B49D00CBB33F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A92690B21C79BE1700CBB33F /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = assets/alarm.mp3; sourceTree = SOURCE_ROOT; };
 		A93111E61C781191006B33F5 /* FallWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,15 +138,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A91090B31C7921170091737B /* MGAlertUtility */ = {
-			isa = PBXGroup;
-			children = (
-				A91090B41C7921170091737B /* MGAlertUtility.h */,
-				A91090B51C7921170091737B /* MGAlertUtility.m */,
-			);
-			path = MGAlertUtility;
-			sourceTree = "<group>";
-		};
 		A92690B11C79BE0800CBB33F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +191,6 @@
 				A93111FA1C781191006B33F5 /* Info.plist */,
 				A93111F71C781191006B33F5 /* LaunchScreen.storyboard */,
 				A93111F21C781191006B33F5 /* Main.storyboard */,
-				A91090B31C7921170091737B /* MGAlertUtility */,
 				A93111E91C781191006B33F5 /* Supporting Files */,
 			);
 			path = FallWatch;
@@ -409,7 +396,6 @@
 				A9F3943E1C7929F900EAB412 /* HealthDataViewController.m in Sources */,
 				A93111EE1C781191006B33F5 /* AppDelegate.m in Sources */,
 				A93111EB1C781191006B33F5 /* main.m in Sources */,
-				A91090B61C7921170091737B /* MGAlertUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

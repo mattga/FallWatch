@@ -14,15 +14,18 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-
-    // Initialize watch connectivity
-    _session          = [WCSession defaultSession];
-    _session.delegate = self;
-
-    if ([WCSession isSupported]) {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	// Override point for customization after application launch.
+	
+    // Overwrite old values
+    
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"wcMessage"];
+    
+	// Initialize watch connectivity
+	_session = [WCSession defaultSession];
+	_session.delegate = self;
+	
+	if ([WCSession isSupported]) {
         NSLog(@"WCSession supported");
         [_session activateSession];
         NSLog(@"WCSession activated");
@@ -134,38 +137,3 @@
 }
 
 @end
-
-// UIAlertController *alert = [UIAlertController
-//							alertControllerWithTitle:@"Are you OK?"
-//							message:@"We detected that you may have been injured.
-// Do
-// you
-// need
-// help?"
-//							preferredStyle:UIAlertControllerStyleAlert];
-//
-// UIAlertAction *yes = [UIAlertAction actionWithTitle:@"Yes"
-//											  style:UIAlertActionStyleCancel
-//											handler:^(UIAlertAction
-//*_Nonnull
-// action)
-//{
-//												NSLog(@"alarm
-//+
-// sms");
-//											}];
-//
-// UIAlertAction *no = [UIAlertAction actionWithTitle:@"No"
-//											 style:UIAlertActionStyleDefault
-//										   handler:^(UIAlertAction
-//*_Nonnull
-// action)
-//{
-//											   [alert
-// dismissViewControllerAnimated:YES completion:nil];
-//										   }];
-//
-//[alert addAction:no];
-//[alert addAction:yes];
-//
-//[self presentViewController:alert animated:YES completion:nil];

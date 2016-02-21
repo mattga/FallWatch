@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *allergiesField;
 @property (weak, nonatomic) IBOutlet UITextField *conditionsField;
 
+- (void)presentForEmergency;
+
 @end

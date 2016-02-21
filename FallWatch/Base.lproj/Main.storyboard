@@ -100,7 +100,6 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWO-SG-723">
                                 <rect key="frame" x="151" y="436" width="73" height="36"/>
-                                <state key="normal" title="Twilio"/>
                                 <connections>
                                     <action selector="twilioPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jr7-yC-apy"/>
                                 </connections>
@@ -147,7 +146,7 @@
         <!--Health Data View Controller-->
         <scene sceneID="LaU-cr-tfY">
             <objects>
-                <viewController id="5Ik-fr-nfb" customClass="HealthDataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="healthInfo" id="5Ik-fr-nfb" customClass="HealthDataViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="91Q-My-jCI"/>
                         <viewControllerLayoutGuide type="bottom" id="EPS-wc-m7L"/>

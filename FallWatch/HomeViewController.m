@@ -9,13 +9,21 @@
 @import AVFoundation;
 
 #import "HomeViewController.h"
+#import "HealthDataViewController.h"
+
+#define NUM_RECORDS 10
 
 @interface HomeViewController () {
     NSTimer *timer;
-    int k;
     AVAudioPlayer *player;
     HKHealthStore *healthStore;
     HKWorkout *workout;
+    UIAlertController *alert;
+
+    // Stores the last NUM_RECORDS z-axis measurements
+    double acc_history[NUM_RECORDS];
+    long k;
+    long last_processed_seq;
 }
 
 @end
@@ -37,6 +45,13 @@
     k                                = 0;
     self.blurView.layer.cornerRadius = 16.;
     self.blurView.clipsToBounds      = YES;
+
+    // initializing sensor data
+    int i;
+    for (i = 0; i < NUM_RECORDS; ++i) acc_history[i] = -0.9814;
+
+    k                  = 0;
+    last_processed_seq = -1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -76,55 +91,109 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (void)refreshAccelData
+- (BOOL)didFallHappen:(double)x:(double)y:(double)z
 {
-    dispatch_async(dispatch_get_main_queue(),
-                   ^{
-                     NSArray *data = [[[NSUserDefaults standardUserDefaults] objectForKey:@"wcMessage"]
-                         objectForKey:@"data"];
-                     NSString *str;
-
-                     if (data) {
-                         double anorm = sqrt(pow([data[0] doubleValue], 2) + pow([data[1] doubleValue], 2) +
-                                             pow([data[2] doubleValue], 2));
-                         str = [NSString stringWithFormat:@"%.4f", anorm];
-                     } else {
-                         str = [NSString stringWithFormat:@"No Data %d", k++];
-                     }
-
-                     /**** MOCK DATA ****/
-                     //                       NSArray *data = [[[NSUserDefaults standardUserDefaults]
-                     //                       objectForKey:@"wcMessage"]
-                     //                                        objectForKey:@"data"];
-                     self.label.text = str;
-                   });
+    //    double cur_avg = [self computeAverageAcc];
+    if (z < 0.0 && z > 0.5 * -0.9814) {
+        NSLog(@"%@", [NSString stringWithFormat:@"x=%.4f y=%.4f z=%.4f", x, y, z]);
+        return TRUE;
+    }
+    return FALSE;
 }
 
-//	// Use your own details here
-//	let fromNumber = "4152226666"
-//	let toNumber = "4153338888"
-//
-//	// Build the request
-//	let request = NSMutableURLRequest(URL:
-// NSURL(string:"https://\(twilioSID):\(twilioSecret)@api.twilio.com/2010-04-01/Accounts/\(twilioSID)/SMS/Messages")!)
-//	request.HTTPMethod = "POST"
-//	request.HTTPBody =
-//"From=\(fromNumber)&To=\(toNumber)&Body=\(message)".dataUsingEncoding(NSUTF8StringEncoding)
-//
-//	// Build the completion block and send the request
-//	NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error)
-// in
-//		print("Finished")
-//		if let data = data, responseDetails = NSString(data: data, encoding: NSUTF8StringEncoding) {
-//			// Success
-//			print("Response: \(responseDetails)")
-//		} else {
-//			// Failure
-//			print("Error: \(error)")
-//		}
-//	}).resume()
+- (double)computeAverageAcc
+{
+    int i;
+    double sum = 0.0;
+    for (i = 0; i < NUM_RECORDS; ++i) sum += acc_history[i];
 
-- (IBAction)twilioPressed:(id)sender
+    return sum / NUM_RECORDS;
+}
+
+- (void)refreshAccelData
+{
+    dispatch_async(
+        dispatch_get_main_queue(),
+        ^{
+          NSArray *data =
+              [[[NSUserDefaults standardUserDefaults] objectForKey:@"wcMessage"] objectForKey:@"data"];
+          NSString *seq =
+              [[[NSUserDefaults standardUserDefaults] objectForKey:@"wcMessage"] objectForKey:@"seq"];
+          NSString *str;
+
+          k++;
+          if (data) {
+              double x    = [data[0] doubleValue];
+              double y    = [data[1] doubleValue];
+              double z    = [data[2] doubleValue];
+              int seq_idx = [seq intValue];
+              if (seq_idx > last_processed_seq) {
+                  //                               acc_history[seq_idx % NUM_RECORDS] = z;
+                  //                               NSLog(@"%@", [NSString stringWithFormat:@"Fall: Seq:%d
+                  //                               x=%.4f y=%.4f z=%.4f",
+                  //                                             seq_idx,x,y,z]);
+                  if ([self didFallHappen:x:y:z]) {
+                      //                                   double curr_avg = [self computeAverageAcc];
+                      NSLog(@"%@",
+                            [NSString stringWithFormat:@"Fall detected: seq %d, z-acc %.4f", seq_idx, z]);
+                      [self triggerAlerts];
+                  }
+
+                  last_processed_seq = seq_idx;
+                  str                = [NSString stringWithFormat:@"%d: %.4f", seq_idx, z];
+              } else {
+                  last_processed_seq = -1;
+              }
+          } else {
+              str = [NSString stringWithFormat:@"No Data %ld", k];
+          }
+
+          /**** MOCK DATA ****/
+          //                       NSArray *data = [[[NSUserDefaults standardUserDefaults]
+          //                       objectForKey:@"wcMessage"]
+          //                                        objectForKey:@"data"];
+          self.label.text = str;
+        });
+}
+
+- (void)showAlert
+{
+    [NSTimer scheduledTimerWithTimeInterval:10.
+                                     target:self
+                                   selector:@selector(dismissAndTrigger)
+                                   userInfo:nil
+                                    repeats:NO];
+
+    alert = [UIAlertController
+        alertControllerWithTitle:@"Are you OK?"
+                         message:@"We detected that you may have been injured. Do you need help?"
+                  preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *yes = [UIAlertAction actionWithTitle:@"Yes"
+                                                  style:UIAlertActionStyleCancel
+                                                handler:^(UIAlertAction *_Nonnull action) {
+                                                  [self triggerAlerts];
+                                                }];
+
+    UIAlertAction *no = [UIAlertAction actionWithTitle:@"No"
+                                                 style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction *_Nonnull action) {
+                                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                               }];
+
+    [alert addAction:no];
+    [alert addAction:yes];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)dismissAndTrigger
+{
+    [alert dismissViewControllerAnimated:YES completion:nil];
+    [self triggerAlerts];
+}
+
+- (void)triggerAlerts
 {
     BOOL doSMS        = [[[NSUserDefaults standardUserDefaults] objectForKey:@"sendSms"] boolValue];
     BOOL doAlarm      = [[[NSUserDefaults standardUserDefaults] objectForKey:@"soundAlarm"] boolValue];
@@ -166,6 +235,16 @@
     if (doAlarm) {
         [player play];
     }
+	
+	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+	HealthDataViewController *vc = [sb instantiateViewControllerWithIdentifier:@"healthInfo"];
+	[vc presentForEmergency];
+	[self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)twilioPressed:(id)sender
+{
+    [self triggerAlerts];
 }
 
 @end
