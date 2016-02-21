@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A91090B61C7921170091737B /* MGAlertUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A91090B51C7921170091737B /* MGAlertUtility.m */; };
+		A92690B31C79BE1700CBB33F /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A92690B21C79BE1700CBB33F /* alarm.mp3 */; };
 		A93111EB1C781191006B33F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A93111EA1C781191006B33F5 /* main.m */; };
 		A93111EE1C781191006B33F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A93111ED1C781191006B33F5 /* AppDelegate.m */; };
-		A93111F11C781191006B33F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93111F01C781191006B33F5 /* ViewController.m */; };
+		A93111F11C781191006B33F5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93111F01C781191006B33F5 /* HomeViewController.m */; };
 		A93111F41C781191006B33F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93111F21C781191006B33F5 /* Main.storyboard */; };
 		A93111F61C781191006B33F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93111F51C781191006B33F5 /* Assets.xcassets */; };
 		A93111F91C781191006B33F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93111F71C781191006B33F5 /* LaunchScreen.storyboard */; };
@@ -21,6 +23,12 @@
 		A93112181C781191006B33F5 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A93112171C781191006B33F5 /* ExtensionDelegate.m */; };
 		A931121B1C781191006B33F5 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A931121A1C781191006B33F5 /* NotificationController.m */; };
 		A931121D1C781191006B33F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A931121C1C781191006B33F5 /* Assets.xcassets */; };
+		A98E4BA71C798B3000B7A80B /* EMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98E4BA61C798B3000B7A80B /* EMessageViewController.m */; };
+		A9F3943E1C7929F900EAB412 /* HealthDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3943D1C7929F900EAB412 /* HealthDataViewController.m */; };
+		A9F394411C79391000EAB412 /* ESettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F394401C79391000EAB412 /* ESettingsTableViewController.m */; };
+		A9F394441C795FB400EAB412 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F394431C795FB400EAB412 /* ContactTableViewController.m */; };
+		A9F394471C7960A100EAB412 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F394461C7960A100EAB412 /* ContactTableViewCell.m */; };
+		A9F3944A1C79774E00EAB412 /* FWContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F394491C79774E00EAB412 /* FWContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +74,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A91090B41C7921170091737B /* MGAlertUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAlertUtility.h; sourceTree = "<group>"; };
+		A91090B51C7921170091737B /* MGAlertUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAlertUtility.m; sourceTree = "<group>"; };
+		A92690AF1C79B49D00CBB33F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A92690B21C79BE1700CBB33F /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = assets/alarm.mp3; sourceTree = SOURCE_ROOT; };
 		A93111E61C781191006B33F5 /* FallWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93111EA1C781191006B33F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A93111EC1C781191006B33F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A93111ED1C781191006B33F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A93111EF1C781191006B33F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A93111F01C781191006B33F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A93111EF1C781191006B33F5 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A93111F01C781191006B33F5 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A93111F31C781191006B33F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A93111F51C781191006B33F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93111F81C781191006B33F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,9 +102,28 @@
 		A931121A1C781191006B33F5 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		A931121C1C781191006B33F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A931121E1C781191006B33F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98E4BA51C798B3000B7A80B /* EMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMessageViewController.h; sourceTree = "<group>"; };
+		A98E4BA61C798B3000B7A80B /* EMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMessageViewController.m; sourceTree = "<group>"; };
+		A9F3943C1C7929F900EAB412 /* HealthDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthDataViewController.h; sourceTree = "<group>"; };
+		A9F3943D1C7929F900EAB412 /* HealthDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthDataViewController.m; sourceTree = "<group>"; };
+		A9F3943F1C79391000EAB412 /* ESettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESettingsTableViewController.h; sourceTree = "<group>"; };
+		A9F394401C79391000EAB412 /* ESettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESettingsTableViewController.m; sourceTree = "<group>"; };
+		A9F394421C795FB400EAB412 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		A9F394431C795FB400EAB412 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		A9F394451C7960A100EAB412 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		A9F394461C7960A100EAB412 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
+		A9F394481C79774E00EAB412 /* FWContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWContact.h; sourceTree = "<group>"; };
+		A9F394491C79774E00EAB412 /* FWContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9681CB34DE059F462F7242F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A93111E31C781191006B33F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,11 +141,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		376593181FA1893D83830A69 /* Frameworks */ = {
+		A91090B31C7921170091737B /* MGAlertUtility */ = {
 			isa = PBXGroup;
 			children = (
+				A91090B41C7921170091737B /* MGAlertUtility.h */,
+				A91090B51C7921170091737B /* MGAlertUtility.m */,
 			);
-			name = Frameworks;
+			path = MGAlertUtility;
+			sourceTree = "<group>";
+		};
+		A92690B11C79BE0800CBB33F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A92690B21C79BE1700CBB33F /* alarm.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		A93111DD1C781191006B33F5 = {
@@ -124,7 +165,7 @@
 				A93112011C781191006B33F5 /* FallWatch WatchKit App */,
 				A93112101C781191006B33F5 /* FallWatch WatchKit Extension */,
 				A93111E71C781191006B33F5 /* Products */,
-				376593181FA1893D83830A69 /* Frameworks */,
+				B353A78ED725A190507EDFF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,14 +182,28 @@
 		A93111E81C781191006B33F5 /* FallWatch */ = {
 			isa = PBXGroup;
 			children = (
+				A92690B11C79BE0800CBB33F /* Resources */,
 				A93111EC1C781191006B33F5 /* AppDelegate.h */,
 				A93111ED1C781191006B33F5 /* AppDelegate.m */,
-				A93111EF1C781191006B33F5 /* ViewController.h */,
-				A93111F01C781191006B33F5 /* ViewController.m */,
-				A93111F21C781191006B33F5 /* Main.storyboard */,
 				A93111F51C781191006B33F5 /* Assets.xcassets */,
-				A93111F71C781191006B33F5 /* LaunchScreen.storyboard */,
+				A9F394451C7960A100EAB412 /* ContactTableViewCell.h */,
+				A9F394461C7960A100EAB412 /* ContactTableViewCell.m */,
+				A9F394421C795FB400EAB412 /* ContactTableViewController.h */,
+				A9F394431C795FB400EAB412 /* ContactTableViewController.m */,
+				A98E4BA51C798B3000B7A80B /* EMessageViewController.h */,
+				A98E4BA61C798B3000B7A80B /* EMessageViewController.m */,
+				A9F3943F1C79391000EAB412 /* ESettingsTableViewController.h */,
+				A9F394401C79391000EAB412 /* ESettingsTableViewController.m */,
+				A9F394481C79774E00EAB412 /* FWContact.h */,
+				A9F394491C79774E00EAB412 /* FWContact.m */,
+				A9F3943C1C7929F900EAB412 /* HealthDataViewController.h */,
+				A9F3943D1C7929F900EAB412 /* HealthDataViewController.m */,
+				A93111EF1C781191006B33F5 /* HomeViewController.h */,
+				A93111F01C781191006B33F5 /* HomeViewController.m */,
 				A93111FA1C781191006B33F5 /* Info.plist */,
+				A93111F71C781191006B33F5 /* LaunchScreen.storyboard */,
+				A93111F21C781191006B33F5 /* Main.storyboard */,
+				A91090B31C7921170091737B /* MGAlertUtility */,
 				A93111E91C781191006B33F5 /* Supporting Files */,
 			);
 			path = FallWatch;
@@ -196,6 +251,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B353A78ED725A190507EDFF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A92690AF1C79B49D00CBB33F /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +287,7 @@
 			buildPhases = (
 				A93111FB1C781191006B33F5 /* Resources */,
 				A93112241C781191006B33F5 /* Embed App Extensions */,
+				9681CB34DE059F462F7242F6 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,9 +336,11 @@
 					};
 					A93111FC1C781191006B33F5 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = B4M63GYCM3;
 					};
 					A931120B1C781191006B33F5 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = B4M63GYCM3;
 					};
 				};
 			};
@@ -303,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92690B31C79BE1700CBB33F /* alarm.mp3 in Resources */,
 				A93111F91C781191006B33F5 /* LaunchScreen.storyboard in Resources */,
 				A93111F61C781191006B33F5 /* Assets.xcassets in Resources */,
 				A93111F41C781191006B33F5 /* Main.storyboard in Resources */,
@@ -333,9 +400,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A93111F11C781191006B33F5 /* ViewController.m in Sources */,
+				A9F394471C7960A100EAB412 /* ContactTableViewCell.m in Sources */,
+				A93111F11C781191006B33F5 /* HomeViewController.m in Sources */,
+				A98E4BA71C798B3000B7A80B /* EMessageViewController.m in Sources */,
+				A9F394441C795FB400EAB412 /* ContactTableViewController.m in Sources */,
+				A9F3944A1C79774E00EAB412 /* FWContact.m in Sources */,
+				A9F394411C79391000EAB412 /* ESettingsTableViewController.m in Sources */,
+				A9F3943E1C7929F900EAB412 /* HealthDataViewController.m in Sources */,
 				A93111EE1C781191006B33F5 /* AppDelegate.m in Sources */,
 				A93111EB1C781191006B33F5 /* main.m in Sources */,
+				A91090B61C7921170091737B /* MGAlertUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +498,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -433,6 +508,7 @@
 		A93112231C781191006B33F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "FallWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mg.apps.FallWatch.watchkitapp.watchkitextension;
@@ -448,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				IBSC_MODULE = FallWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "FallWatch WatchKit App/Info.plist";
@@ -471,10 +548,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = mg.apps.FallWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

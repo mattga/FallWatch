@@ -7,6 +7,8 @@
 //
 
 @import WatchConnectivity;
+@import AVFoundation;
+@import HealthKit;
 
 #import <UIKit/UIKit.h>
 
@@ -14,6 +16,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) WCSession *session;
+@property (strong, nonatomic) AVAudioPlayer *player;
+@property (strong, nonatomic) HKHealthStore *healthStore;
 
 @end
 
