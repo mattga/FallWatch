@@ -1,8 +1,8 @@
 # FallWatch
 
-HackISU Winner of:
-Best Entrepreneurial Hack
-Best Healthcare or Wellness Hack by Optum
+HackISU Winner of:   
+Best Entrepreneurial Hack   
+Best Healthcare or Wellness Hack by Optum   
 
 ## Inspiration
 What can we do to notify paramedics of domestic medical emergencies at the point it happens? For senior citizens, the highest risk is involuntary tripping and mortally injuring themselves, often undiscovered for hours.
